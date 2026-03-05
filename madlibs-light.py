@@ -124,6 +124,7 @@ def collect_answers(prompts, rules):
             user_input = input(value)
             ok, cleaned, message = validate_input(key, user_input, RULES)
             if ok == False:
+                print(message)
                 continue
             answers[key] = user_input
             break
